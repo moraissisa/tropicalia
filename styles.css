@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: #f04896;
+    --laranja-claro: #ff75f3;
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ff179e;
+    --alto-contraste-link: #ff008c;
 }
 
 body {
@@ -11,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #f0bee3;
+    background-color: #ffa8ddc4;
 }
 
 
@@ -21,13 +24,13 @@ section {
 
 
 .nav-link {
-    color: #f1b9da;
+    color: #fa00e5;
     font-weight: 600;
 }
 
 .inicio-fundo {
     /* aula 3 */
-    background-image: url('img/fundo');
+    background-image: url('rosa.jpg');
     /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
@@ -61,9 +64,7 @@ section {
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
 
 }
@@ -75,11 +76,11 @@ section {
 
 #tropicalia {
     position: relative;
-    padding-top: 8rem;
+    padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
+    background: url('logoflor.jpg') top right no-repeat,
+        url('logoflor.jpg') bottom left no-repeat;
     background-size: 180px 180px;
     /* Ajuste o tamanho conforme necessário */
 }
@@ -102,13 +103,13 @@ h2 {
 }
 
 #galeria {
-    background-color: #eecae2;
+    background-color: #ffb0e7;
 
 }
 
 .fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
+    background: url('') bottom right no-repeat;
+    background-size: 1800px 1800px;
 }
 
 #contato {
@@ -120,7 +121,7 @@ h2 {
 }
 
 .formulario {
-    background-color: #f3e0ee;
+    background-color: #ff9bf2;
     padding: 2rem;
     /* Espaçamento interno dentro do formulário */
     border-radius: 10px;
@@ -131,12 +132,69 @@ h2 {
 }
 
 .formulario button {
-    background-color: #f1b7db;
+    background-color: #ff00d4;
     border: none;
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
-    background-color: #ecbcd3;
+    background-color: #f398ca;
+}
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
+}
+
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #tropicalia {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+.alto-contraste .fundo-galeria {
+    background: none;
 }
